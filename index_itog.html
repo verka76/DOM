@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles_i.css">
+    <script>
+        let user = {
+            surname: 'Михеева',
+            name : 'Татьяна',
+			patronymic: 'Александровна',
+			ocupation: 'Преподаватель специальных дисциплин',
+			degree: 'Высшее',
+            education: 'Московский государственный институт электронной техники (технический университет)',
+            qualification: 'Инженер-программист инфокоммуникационных систем',
+            specialty: 'Программное обеспечение радиоэлектронных систем',
+            discipline: ['Основы алгоритмизации и программирования', 'Компьютерная графика'],
+             category: prompt('Категория преподавателя:', 'Первая'),
+             experience: prompt('Стаж:', '13'),
+             email: prompt('E-mail: ', 'mixeeva-alecandrovna@gmail.com'),
+             site: prompt('Персональный сайт:', 'mixeeva.ru')
+        }
+    </script>
+</head>
+<body>
+    <div>
+		<header>
+			<ul class = "menu">
+				<li><a href = "" >О проекте </a></li>
+				<li><a href = "" >Курсы</a></li>
+                <li><a href = "" >Преподаватели</a></li>
+                <li><a href = "" >Контакты</a></li>
+			</ul>
+		</header>
+	</div>
+    <div class="main">
+         <div class="blocks">
+            <img src="no-image.jpg"  width="400">
+            <section class="info">
+                    <script>
+                        let result=`
+                       <h1> ${user.surname} <br> ${user.name} ${user.patronymic}</h1> 
+                    <h2> ${user.ocupation} </h2>
+                    <hr>
+                    <p><h3>Основная информация:</h3>
+                        <ul>
+                            <li>Уровень образования: ${user.degree}</li>
+                            <li>Образование: ${user.education}</li>
+                            <li>Клавификация: ${user.qualification}</li>
+                            <li>Спецализация: ${user.specialty}</li>
+                              <ul> 
+                                <li> ${user.discipline[0]}</li>
+                                <li> ${user.discipline[1]}</li>
+                                </ul>
+                             </ul>
+                    </p>
+                    <p> <h3> Дополнительная информация </h3>
+                        <ul>
+                            <li>Стаж: ${user.experience}</li>
+                            <li>E-mail: ${user.email}</li>
+                            <li>Персональный сайт: ${user.site}</li>
+                        <ul>
+                        </p>
+                        `;
+                        document.write(result);
+                    </script>
+                </section>
+         </div>
+     </div>
+</body>
+</html>
